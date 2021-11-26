@@ -4,7 +4,7 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
-  --color-border:#ccc;
+  --color-border: #ccc;
   --border-radius: 30px;
 }
 
@@ -105,6 +105,7 @@ a {
 
 .badge--small {
   font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -196,12 +197,12 @@ a {
 .btn--outline {
   background: #fff;
   color: var(--color-headings);
-  border:2px solid var(--color-headings);
+  border: 2px solid var(--color-headings);
 }
-.btn--outline:hover{
+.btn--outline:hover {
   background: var(--color-headings);
-  color:#fff;
-  transition: .20s;
+  color: #fff;
+  transition: 0.2s;
 }
 .btn--accent:hover {
   background: #ec3000;
@@ -212,13 +213,13 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-  .btn{
+  .btn {
     font-size: 1.5rem;
   }
 }
 
 /* Inputs */
-.input{
+.input {
   padding: 1.5rem 3.5rem;
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
@@ -226,27 +227,96 @@ a {
   color: var(--color-headings);
   font-size: 2rem;
 }
-::placeholder{
+::placeholder {
   color: #cdcbd7;
 }
 
-.input-group{
+.input-group {
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
   display: flex;
 }
-.input-group .input{
+.input-group .input {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 1rem;
 }
 
-.input-group .btn{
+.input-group .btn {
   margin: 4px;
 }
 
 @media screen and (min-width: 1024px) {
-  .input{
+  .input {
     font-size: 1.5rem;
+  }
+}
+
+/* Cards */
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+}
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+.card--primary .card__header{
+  background: var(--color-primary);
+  color: #fff;
+
+}
+.card--secondary .card__header{
+  background: var(--color-secondary);
+  color: #fff;
+
+}
+.card--accent .card__header{
+  background: var(--color-accent);
+  color: #fff;
+
+}
+.card--secondary .badge--secondary{
+  background: #02cdf1;
+}
+
+/* Plans */
+.plan__name{
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+.plan__price{
+  font-size: 6rem;
+}
+.plan__billing-cycle{
+  font-size: 2.4rem;
+  font-weight: 300;
+  opacity: .8;
+  margin-right: 1rem;
+}
+.plan__description{
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+.plan .list__item{
+  margin-bottom: 2rem;
+}
+@media screen and (min-width:1024px) {
+  .plan__name{
+    font-size: 1.4rem;
+  }
+
+  .plan__price{
+    font-size: 5rem;
+  }
+
+  .plan__billing-cycle{
+    font-size: 1.6rem;
   }
 }
