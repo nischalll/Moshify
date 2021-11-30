@@ -188,6 +188,12 @@ a {
   white-space: nowrap;
   text-align: center;
 }
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
 .btn--primary {
   background: var(--color-primary);
   color: #fff;
@@ -242,6 +248,7 @@ a {
   outline: 0;
   color: var(--color-headings);
   font-size: 2rem;
+  min-width: 40px;
 }
 ::placeholder {
   color: #cdcbd7;
@@ -255,7 +262,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
@@ -511,18 +518,18 @@ a {
 }
 .collapsible__chevron {
   transform: rotate(-90deg);
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 .collapsible__content {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-.collapsible--expanded .collapsible__chevron{
+.collapsible--expanded .collapsible__chevron {
   transform: rotate(0);
 }
-.collapsible--expanded .collapsible__content{
+.collapsible--expanded .collapsible__content {
   display: block;
   max-height: 100vh;
   opacity: 1;
@@ -555,31 +562,31 @@ a {
 }
 .nav__toggler {
   opacity: 0.5;
-  transition: box-shadow .15s;
+  transition: box-shadow 0.15s;
   cursor: pointer;
 }
-.nav.collapsible--expanded .nav__toggler{
+.nav.collapsible--expanded .nav__toggler {
   opacity: 1;
-  box-shadow: 0 0 .5px 3px #666;
+  box-shadow: 0 0 0.5px 3px #666;
   border-radius: 5px;
 }
 
-.nav__brand{
+.nav__brand {
   transform: translateY(5px);
 }
 
 @media screen and (min-width: 786px) {
-  .nav__toggler{
+  .nav__toggler {
     display: none;
   }
-  .list.nav__list{
+  .list.nav__list {
     width: auto;
     display: flex;
     font-size: 1.6rem;
     max-height: 100%;
     opacity: 1;
   }
-  .nav__item{
+  .nav__item {
     border: 0;
   }
 }
@@ -588,21 +595,46 @@ a {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
-.hero__tagline{
+.hero__tagline {
   font-size: 2rem;
   color: #b9c3cf;
   letter-spacing: 1px;
   margin: 2rem 0 5rem;
 }
-.hero__image{
+.hero__image {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .hero{
+  .hero {
     padding-top: 0;
   }
-  .hero__content{
+  .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+/* Domain Block*/
+.input-group.domain-group {
+  margin-left: 30px;
+  margin-right: 30px;
+  align-self: center;
+}
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+}
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+}
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }
